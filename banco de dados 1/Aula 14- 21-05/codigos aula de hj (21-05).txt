@@ -1,0 +1,49 @@
+CREATE TABLE departamento(
+id_depto SERIAL PRIMARY KEY,
+nome VARCHAR(100),
+localizacao VARCHAR(50)
+);
+
+CREATE TABLE funcionario(
+id_func SERIAL PRIMARY KEY,
+nome TEXT,
+salario (DECIMAL),
+data_contratacao DATE
+);
+
+CREATE TABLE usuario(
+nome SERIAL PRIMARY KEY,
+email VARCHAR (50) UNIQUE NOT NULL,
+data DATA
+);
+
+CREATE TABLE inventario(
+nome SERIAL PRIMARY KEY,
+valor (DECIMAL),
+status BOOLEANO
+);
+
+CREATE TABLE clientes (
+id_cliente SERIAL PRIMARY KEY,
+nome VARCHAR (100)
+);
+
+CREATE TABLE produtos (
+id_produto SERIAL PRIMARY KEY,
+nome VARCHAR (100)
+);
+
+CREATE TABLE categoria (
+id_categoria SERIAL PRIMARY KEY,
+id_produto INT references produto(id_produto),
+name (!00)
+);
+
+CREATE TABLE pedidos (
+id_pedidos SERIAL PRIMARY KEY,
+data DATE,
+id_cliente INT references cliente(id_cliente),
+nome (100)
+);
+
+
